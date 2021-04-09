@@ -1,18 +1,29 @@
 CREATE TABLE blogs
 (
-    Id INT NOT NULL AUTO_INCREMENT,
-    Title VARCHAR(255) NOT NULL,
-    Body VARCHAR(255) NOT NULL,
+    id INT NOT NULL AUTO_INCREMENT,
+    title VARCHAR(255) NOT NULL,
+    body VARCHAR(255) NOT NULL,
     imgUrl VARCHAR(255) NOT NULL,
     published TINYINT, 
-    CreatorId VARCHAR (255) NOT NULL
-)
+    creatorId VARCHAR (255) NOT NULL
+    PRIMARY KEY (Id)
+);
 
 CREATE TABLE comments
 (
     Id INT NOT NULL AUTO_INCREMENT,
     CreatorId VARCHAR (255) NOT NULL,
     Body VARCHAR(255) NOT NULL,
-    Blog VARCHAR(255) NOT NULL
+    Blog VARCHAR(255) NOT NULL,
 
-)
+
+);
+
+CREATE TABLE profiles
+(
+    id VARCHAR(255) NOT NULL,
+    email VARCHAR(255) NOT NULL,
+    name VARCHAR(255),
+    picture VARCHAR(255),
+    PRIMARY KEY (id)
+);
